@@ -13,7 +13,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-localdisk-deployment
+  name: nginx-local-premium-deployment
 spec:
   replicas: 1
   selector:
@@ -36,3 +36,15 @@ spec:
         volumeMounts:
         - name: webcontent
           mountPath: "/usr/share/nginx/html/web-app"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-premium-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
