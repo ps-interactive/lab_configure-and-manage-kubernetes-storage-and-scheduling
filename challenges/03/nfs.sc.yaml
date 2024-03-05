@@ -4,9 +4,10 @@ metadata:
   name: nfs-csi
 provisioner: nfs.csi.k8s.io
 parameters:
-  server: kubernetes-master
+  server: kubernetes-nfs
   share: /export/volumes/pod
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 mountOptions:
   - nfsvers=4.1
+ 

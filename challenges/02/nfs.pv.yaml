@@ -9,5 +9,5 @@ spec:
     storage: 10Gi
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: kubernetes-master
+    server: kubernetes-nfs
     path: "/export/volumes/pod"
